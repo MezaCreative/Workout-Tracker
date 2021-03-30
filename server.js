@@ -20,6 +20,8 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useNewUrlParser:true,
     useFindAndModify: false,
+    useCreateIndex: true,
+    useFindAndModify: false
 });
 
 // routes
@@ -38,6 +40,10 @@ app.get("/exercise", (req, res) => {
 
 app.get("/stats", (req, res) => {
     res.sendFile(path.join(__dirname + "/public/stats.html"));
+})
+
+app.listen(PORT,() => {
+    console.log(`App running on port ${PORT}!`);
 })
 
 // API-Routes
@@ -71,6 +77,3 @@ app.get("/api/workouts/range", (req, res) => {
         res.json(err);
     });
 });
-app.listen(PORT,() => {
-    console.log(`App running on port ${PORT}!`);
-})
