@@ -29,7 +29,7 @@
   [Heroku Link](Link) 
     
     
-  ![Image](https://github.com/MezaCreative/Workout-Tracker/blob/main/assets/landing.png)
+  ![Image](https://github.com/MezaCreative/Workout-Tracker/blob/main/landing.png)
   ## Contributing
 
   Contributions can be made by contacting my email
